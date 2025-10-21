@@ -442,8 +442,8 @@ body.dark-theme {
 /*=============== ACCORDION ===============*/
 .accordion-btn {
   width: 100%;
-  max-width: 90%; /* Usar porcentaje para mejor ajuste */
-  max-width: 250px; /* Máximo ancho para móviles */
+  max-width: 90%;
+  max-width: 280px; /* Ligeramente más ancho para consistencia */
   margin: 0.4rem auto;
   background-color: var(--first-color);
   color: #fff;
@@ -451,7 +451,7 @@ body.dark-theme {
   font-weight: 600;
   border: none;
   border-radius: 0.6rem;
-  padding: 0.5rem 1rem; /* Aumentado para más espacio */
+  padding: 0.5rem 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -487,28 +487,31 @@ body.dark-theme {
   background-color: var(--text-color-lighten);
   border-radius: 0.5rem;
   margin: 0.3rem auto;
-  padding: 0 1rem; /* Aumentado para más espacio */
+  padding: 0 1.2rem; /* Más padding para espacio */
   box-shadow: 0 2px 6px hsla(var(--hue), 20%, 40%, 0.15);
-  max-width: 90%; /* Usar porcentaje para mejor ajuste */
-  max-width: 250px; /* Máximo ancho para móviles */
-  word-wrap: break-word; /* Evita que el texto se corte */
-  line-height: 1.4; /* Mejora la legibilidad */
+  max-width: 90%;
+  max-width: 300px; /* Más ancho para mostrar todo el texto */
+  white-space: normal; /* Asegura que el texto se envuelva */
+  word-break: break-word; /* Rompe palabras largas */
+  line-height: 1.5; /* Mejora la legibilidad */
 }
 
 .accordion-btn.active + .accordion-content {
   opacity: 1;
-  padding: 0.8rem 1rem; /* Aumentado para más espacio */
-  min-height: 80px; /* Asegura que el contenido sea visible */
+  padding: 1rem 1.2rem; /* Más espacio cuando está abierto */
+  min-height: 100px; /* Mayor altura para asegurar visibilidad */
+  max-width: 90%;
+  max-width: 320px; /* Más ancho cuando está abierto */
 }
 
 .accordion-content ul {
-  padding-left: 1.5rem; /* Más espacio para las viñetas */
+  padding-left: 1.5rem;
   list-style: disc;
   text-align: left;
 }
 
 .accordion-content li {
-  margin-bottom: 0.4rem; /* Más espacio entre elementos */
+  margin-bottom: 0.5rem; /* Más espacio entre elementos */
   color: var(--title-color);
 }
 
@@ -554,10 +557,19 @@ body.dark-theme .accordion-content {
     height: 120px;
   }
   
-  .accordion-btn,
+  .accordion-btn {
+    max-width: 90%;
+    max-width: 260px; /* Ligeramente más estrecho para pantallas pequeñas */
+  }
+  
   .accordion-content {
-    max-width: 90%; /* Más flexible */
-    max-width: 220px; /* Ligeramente más estrecho para pantallas muy pequeñas */
+    max-width: 90%;
+    max-width: 280px; /* Más ancho para el contenido */
+  }
+  
+  .accordion-btn.active + .accordion-content {
+    max-width: 90%;
+    max-width: 300px; /* Más ancho cuando está abierto */
   }
 }
 
@@ -581,9 +593,19 @@ body.dark-theme .accordion-content {
     max-width: 400px;
   }
   
-  .accordion-btn,
+  .accordion-btn {
+    max-width: 90%;
+    max-width: 300px;
+  }
+  
   .accordion-content {
-    max-width: 300px; /* Más ancho para tabletas */
+    max-width: 90%;
+    max-width: 350px;
+  }
+  
+  .accordion-btn.active + .accordion-content {
+    max-width: 90%;
+    max-width: 370px; /* Más ancho cuando está abierto */
   }
 }
 
