@@ -690,4 +690,41 @@ body.dark-theme .accordion-content {
   .footer__copy {
     margin: 4.5rem 0 2.5rem;
   }
+  /* 📱 Mejora visual del accordion en móviles */
+@media screen and (max-width: 480px) {
+  .accordion-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    max-width: 260px;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .accordion-content {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 0.5rem 0.8rem;
+    max-width: 260px;
+    border-radius: 0.5rem;
+    background-color: var(--text-color-lighten);
+    word-break: break-word;
+  }
+
+  .accordion-btn.active + .accordion-content {
+    padding: 0.7rem 0.9rem;
+    max-height: 1000px; /* Permite que el contenido se expanda bien */
+  }
+
+  /* Ajustes internos del texto */
+  .accordion-content ul {
+    padding-left: 1.2rem;
+    margin: 0.3rem 0;
+  }
+
+  .accordion-content li {
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+  }
 }
