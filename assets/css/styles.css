@@ -403,6 +403,64 @@ img {
   justify-content: center;
 }
 
+/* Card general */
+.allergies-card {
+  background-color: var(--container-color);
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px var(--shadow-light);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Título */
+.allergies-card .profile__info-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000; /* negro en tema claro */
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+/* Contenedor de chips */
+.allergies__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Card general */
+.allergies-card {
+  background-color: var(--container-color);
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px var(--shadow-light);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Título */
+.allergies-card .profile__info-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000; /* negro en tema claro */
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+/* Contenedor de chips */
+.allergies__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
 /* Chips individuales */
 .allergy-chip {
   background-color: var(--container-color);
@@ -418,13 +476,13 @@ img {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-/* Cambios para modo oscuro */
+/* Modo oscuro */
 body.dark-theme .allergies-card {
   box-shadow: 0 4px 8px var(--shadow-dark);
 }
 
 body.dark-theme .allergies-card .profile__info-title {
-  color: var(--first-color-alt);
+  color: #fff; /* título blanco en modo oscuro */
 }
 
 body.dark-theme .allergy-chip {
