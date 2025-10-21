@@ -3,14 +3,6 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  /*
-      Blue: hsl(207, 90%, 61%)
-      Purple: hsl(250, 66%, 75%)
-      Pink: hsl(356, 66%, 75%)
-      Teal: hsl(174, 63%, 62%)
-  */
   --hue: 207;
   --sat: 90%;
   --lig: 61%;
@@ -23,8 +15,6 @@
   --body-color: hsl(var(--hue), 100%, 99%);
   --container-color: #fff;
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: 'Poppins', sans-serif;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -85,11 +75,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
+  padding-left: 0.5rem; /* Reducido para móviles */
+  padding-right: 0.5rem;
 }
 
 /*=============== PROFILE ===============*/
@@ -120,14 +107,14 @@ img {
 
 .profile__perfil {
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 140px; /* Reducido para móviles */
+  height: 140px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.2rem;
+  margin: 0 auto 1rem;
   box-shadow: 0 8px 32px hsla(var(--hue), var(--sat), var(--lig), 0.2);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -175,16 +162,16 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 2.5rem;
+  column-gap: 1.5rem; /* Reducido para móviles */
   width: 100%;
-  max-width: 600px;
+  max-width: 300px; /* Más estrecho para móviles */
   margin: 0 auto;
 }
 
 .profile__info-group {
   text-align: center;
   flex: 1;
-  min-width: 100px;
+  min-width: 80px; /* Reducido para móviles */
 }
 
 .profile__info-number {
@@ -204,7 +191,7 @@ img {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 300px; /* Más estrecho para móviles */
   margin: 0 auto;
 }
 
@@ -422,7 +409,7 @@ img {
 .change-theme {
   position: absolute;
   top: 1.5rem;
-  right: 0;
+  right: 1rem; /* Ajustado para evitar que esté pegado al borde */
   font-size: 1.25rem;
   color: var(--title-color);
   cursor: pointer;
@@ -440,7 +427,6 @@ body.dark-theme {
   --container-color: hsl(var(--hue), 24%, 12%);
 }
 
-/* Colors changes in some parts of the website, in light theme */
 .dark-theme .button__gray {
   background-color: var(--container-color);
 }
@@ -456,7 +442,7 @@ body.dark-theme {
 /*=============== ACCORDION ===============*/
 .accordion-btn {
   width: 100%;
-  max-width: 200px;
+  max-width: 180px; /* Reducido para móviles */
   margin: 0.4rem auto;
   background-color: var(--first-color);
   color: #fff;
@@ -502,7 +488,7 @@ body.dark-theme {
   margin: 0.3rem auto;
   padding: 0 0.8rem;
   box-shadow: 0 2px 6px hsla(var(--hue), 20%, 40%, 0.15);
-  max-width: 200px;
+  max-width: 180px; /* Reducido para móviles */
 }
 
 .accordion-btn.active + .accordion-content {
@@ -540,21 +526,32 @@ body.dark-theme .accordion-content {
 /*=============== BREAKPOINTS ===============*/
 @media screen and (max-width: 320px) {
   .container {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.5rem; /* Reducido para más espacio */
+    margin-right: 0.5rem;
   }
   
   .profile__info {
-    column-gap: 1.5rem;
+    column-gap: 1rem;
+    max-width: 280px; /* Más estrecho */
   }
   
   .profile__buttons {
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 0.8rem;
   }
   
   .skills__box {
     column-gap: 1rem;
+  }
+  
+  .profile__perfil {
+    width: 120px; /* Más pequeño para móviles pequeños */
+    height: 120px;
+  }
+  
+  .accordion-btn,
+  .accordion-content {
+    max-width: 160px; /* Más estrecho para móviles pequeños */
   }
 }
 
@@ -567,6 +564,20 @@ body.dark-theme .accordion-content {
   .filters__content {
     width: 332px;
     margin: 3rem auto;
+  }
+  
+  .profile__info {
+    max-width: 400px; /* Ligeramente más ancho para tabletas */
+  }
+  
+  .profile__buttons,
+  .profile__buttons-small {
+    max-width: 400px;
+  }
+  
+  .accordion-btn,
+  .accordion-content {
+    max-width: 200px; /* Restaurar ancho original */
   }
 }
 
@@ -608,6 +619,7 @@ body.dark-theme .accordion-content {
   
   .profile__info {
     column-gap: 3rem;
+    max-width: 600px; /* Restaurar ancho original */
   }
   
   .profile__info-description {
@@ -616,6 +628,7 @@ body.dark-theme .accordion-content {
   
   .profile__buttons {
     column-gap: 2rem;
+    max-width: 600px;
   }
   
   .projects__content {
